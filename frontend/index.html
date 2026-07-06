@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ContractGuard – Extract Harmful Clauses</title>
+    <!-- Premium Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, hsl(210, 30%, 12%), hsl(260, 30%, 8%));
+            --card-bg: rgba(255, 255, 255, 0.06);
+            --accent: hsl(200, 90%, 55%);
+            --text-primary: hsl(0, 0%, 95%);
+            --text-secondary: hsl(0, 0%, 70%);
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        h1 {
+            margin: 0 0 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--accent);
+        }
+        .file-input {
+            margin: 1rem 0;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        input[type="file"] {
+            border: none;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button {
+            background: var(--accent);
+            border: none;
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+        button:hover { transform: translateY(-2px); }
+        .result {
+            margin-top: 1.5rem;
+            background: rgba(255,255,255,0.04);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+            color: var(--text-secondary);
+        }
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ContractGuard</h1>
+        <p style="text-align:center;">Upload a contract (PDF or TXT) and extract potentially harmful clauses.</p>
+        <div class="file-input">
+            <input type="file" id="contractFile" accept=".pdf,.txt" />
+            <button id="uploadBtn">Extract</button>
+        </div>
+        <div id="loading" style="display:none; text-align:center;">⏳ Processing…</div>
+        <div class="result" id="resultContainer" style="display:none;">
+            <pre id="resultJson"></pre>
+        </div>
+    </div>
+    <div class="footer">
+        © 2024 ContractGuard – Powered by FastAPI &amp; Antigravity AI
+    </div>
+    <script>
+        const uploadBtn = document.getElementById('uploadBtn');
+        const fileInput = document.getElementById('contractFile');
+        const loading = document.getElementById('loading');
+        const resultContainer = document.getElementById('resultContainer');
+        const resultJson = document.getElementById('resultJson');
+
+        uploadBtn.addEventListener('click', async () => {
+            if (!fileInput.files.length) {
+                alert('Please select a contract file first.');
+                return;
+            }
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+            loading.style.display = 'block';
+            resultContainer.style.display = 'none';
+            try {
+                const response = await fetch('/extract', {
+                    method: 'POST',
+                    body: formData,
+                });
+                const data = await response.json();
+                resultJson.textContent = JSON.stringify(data, null, 2);
+                resultContainer.style.display = 'block';
+            } catch (e) {
+                alert('Error extracting clauses: ' + e.message);
+            } finally {
+                loading.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

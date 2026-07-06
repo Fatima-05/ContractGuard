@@ -1,0 +1,11 @@
+.venv/
+.venv/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+*.ttf
+AGENTS.md
+debug_missed.py
+test*.txt
+sample*.txt
