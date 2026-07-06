@@ -1,8 +1,14 @@
 import asyncio
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 import streamlit as st
 from datetime import datetime
-from pathlib import Path
 from fpdf import FPDF
+
+# Import backend classifier directly (no FastAPI needed)
 from backend.agents.clause_extractor_agent import extract_clauses_from_file
 
 st.set_page_config(
