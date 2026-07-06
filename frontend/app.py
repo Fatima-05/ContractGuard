@@ -1,8 +1,9 @@
+import asyncio
 import streamlit as st
-import requests
 from datetime import datetime
 from pathlib import Path
 from fpdf import FPDF
+from backend.agents.clause_extractor_agent import extract_clauses_from_file
 
 st.set_page_config(
     page_title="ContractGuard",
@@ -179,25 +180,19 @@ with title_col2:
 # ── Analyze trigger ──
 if analyze_btn and uploaded_file:
     with st.spinner("Analyzing contract..."):
-        files = {"file": (uploaded_file.name, uploaded_file.getvalue())}
         try:
-            resp = requests.post("http://127.0.0.1:8000/extract", files=files, timeout=60)
-            if resp.status_code == 200:
-                data = resp.json()
-                clauses = data.get("clauses", [])
-                st.session_state.current_results = clauses
-                st.session_state.current_file = uploaded_file.name
-                flagged = sum(1 for c in clauses if c.get("harmful"))
-                st.session_state.history.append({
-                    "timestamp": datetime.now().isoformat(),
-                    "name": uploaded_file.name,
-                    "total": len(clauses),
-                    "flagged": flagged,
-                })
-            else:
-                st.error(f"API error {resp.status_code}")
+            clauses = asyncio.run(extract_clauses_from_file(uploaded_file.getvalue()))
+            st.session_state.current_results = clauses
+            st.session_state.current_file = uploaded_file.name
+            flagged = sum(1 for c in clauses if c.get("harmful"))
+            st.session_state.history.append({
+                "timestamp": datetime.now().isoformat(),
+                "name": uploaded_file.name,
+                "total": len(clauses),
+                "flagged": flagged,
+            })
         except Exception as e:
-            st.error(f"Request failed: {e}")
+            st.error(f"Analysis failed: {e}")
     st.rerun()
 
 # ── Display results ──

@@ -1,0 +1,29 @@
+======================================================================
+NOVEL CONTRACT — Completely different wording than test data
+======================================================================
+
+Marketing Services Agreement. This Marketing Services Agreement is between Acme Corp ("Client") and BigTech Inc ("Provider").
+
+1. Services. Provider will deliver the marketing services listed in Schedule A.
+
+2. Payment and Fees. Provider will invoice Client monthly. All invoices are due within 15 days. Client may not dispute any invoice after 10 business days. Any unpaid amount will incur monthly interest at 3%. Provider may adjust fees at any time with 5 days email notice.
+
+3. Intellectual Property. All deliverables, templates, methodologies, and work product created under this Agreement shall be the sole property of Provider. Client receives a non-exclusive, non-transferable license to use the deliverables for internal purposes only.
+
+4. Data License. Client retains ownership of its customer data. Client grants Provider a non-exclusive, worldwide, perpetual, irrevocable, sublicensable license to aggregate, analyze, and commercialize Client's customer data for any business purpose.
+
+5. Limitation of Liability. Neither party shall be liable for indirect damages. Provider's maximum liability for any claim is the total fees paid by Client in the prior 6 months, not to exceed $100. This cap applies even if the Provider's negligence causes the loss.
+
+6. Indemnification. Client shall indemnify, defend, and hold Provider harmless from any third party claim arising out of Client's use of the services, including claims caused by Provider's own security failures or data breaches.
+
+7. Term and Renewal. This Agreement renews automatically each year. Client must send cancellation notice no earlier than 120 days and no later than 90 days before renewal. If Client fails to cancel within this window, the fees increase by 15%.
+
+8. Confidentiality. Each party will protect the other's confidential information for 3 years after termination.
+
+9. Governing Law. This Agreement is governed by the laws of Delaware. Any disputes shall be resolved in the courts located in Provider's headquarters city.
+
+10. Warranty Disclaimer. THE SERVICES ARE PROVIDED "AS IS" WITHOUT ANY WARRANTY. PROVIDER DISCLAIMS ALL IMPLIED WARRANTIES INCLUDING MERCHANTABILITY AND FITNESS.
+
+======================================================================
+END OF NOVEL CONTRACT
+======================================================================

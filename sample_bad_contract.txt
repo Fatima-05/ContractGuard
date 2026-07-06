@@ -1,0 +1,38 @@
+Definitions:
+This Agreement defines the terms used throughout the contract.
+
+Termination:
+Either Party may terminate this Agreement at any time, with no notice, for any reason.
+
+Confidentiality:
+Both Parties agree to keep confidential all information forever, even after the contract ends, and the disclosing party may enforce unlimited penalties.
+
+Liability:
+Each Party shall be liable for any and all damages, including indirect, consequential, punitive, and speculative losses, without any monetary cap.
+
+Governing Law:
+This Agreement shall be governed by the laws of a jurisdiction chosen solely by the Provider.
+
+Dispute Resolution:
+All disputes shall be resolved exclusively by binding arbitration in the Provider’s home city, with the Provider selecting the arbitrator and bearing all costs.
+
+Payment:
+Payments are due immediately upon receipt of an invoice, and late payments will incur a 25% per day penalty.
+
+Intellectual Property:
+All IP created during the engagement shall be owned exclusively by the Provider, and the Contractor waives any moral rights.
+
+Data Protection:
+Both Parties shall comply with data protection regulations, but the Provider may retain all data indefinitely for any purpose.
+
+Force Majeure:
+Performance obligations are suspended for any event, including acts of the other Party, without notice.
+
+Assignment:
+The Provider may assign all rights and obligations to any third party without the other Party’s consent.
+
+Notices:
+All notices shall be deemed delivered upon posting on the Provider’s website.
+
+Entire Agreement:
+This document supersedes all prior discussions, even if those discussions were not included herein.

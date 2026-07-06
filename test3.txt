@@ -1,0 +1,30 @@
+======================================================================
+FULL CONTRACT TEST EXAMPLE 2: SOFTWARE-AS-A-SERVICE (SAAS) AGREEMENT
+======================================================================
+
+This Software-as-a-Service Agreement (the "Agreement") governs the Client's access to and use of the Cloud Platform provided by the Provider.
+
+SECTION 1: LICENSE GRANT [UNHARMFUL]
+Provider grants Client a non-exclusive, non-transferable right to access and use the Cloud Platform during the Subscription Term solely for its internal business operations.
+
+SECTION 2: DATA RIGHTS AND USE [HARMFUL]
+Client retains legal ownership of its uploaded data. However, Client hereby grants Provider a perpetual, worldwide, irrevocable, royalty-free license to mine, aggregate, monetize, and sell Client's operational data, user behaviors, and customer records to third-party data brokers. Provider is under no obligation to anonymize or de-identify this information prior to commercial distribution or public sale.
+
+SECTION 3: SERVICE LEVEL AGREEMENT [UNHARMFUL]
+Provider shall use commercially reasonable efforts to make the Cloud Platform available with a Monthly Uptime Percentage of at least 99.9% during any monthly billing cycle.
+
+SECTION 4: AUTOMATIC RENEWAL AND PRICING [HARMFUL]
+The initial subscription term is twelve (12) months. This Agreement will automatically renew for successive three-year terms unless Client cancels via certified mail exactly sixty-five (65) days before the expiration date. Failure to cancel precisely on this day triggers automatic renewal along with a compounding 50% increase in the annual subscription fee, which will be charged immediately to the Client's credit card on file without prior notification.
+
+SECTION 5: CONFIDENTIALITY [UNHARMFUL]
+Each party agrees to protect the other party's confidential information with the same degree of care that it uses to protect its own confidential information of like kind, but no less than reasonable care.
+
+SECTION 6: TERMINATION FOR CONVENIENCE [HARMFUL]
+Provider may terminate this Agreement immediately at any time for any reason or no reason by cutting off account access. Client shall not be entitled to any refund for unused portions of prepaid subscription fees. Upon such termination, Provider reserves the right to permanently delete all Client data from its servers within one (1) hour, without providing a data export or backup copy to the Client.
+
+SECTION 7: GOVERNING LAW [UNHARMFUL]
+This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without giving effect to any choice of law principles.
+
+======================================================================
+END OF CONTRACT EXAMPLE 2
+======================================================================

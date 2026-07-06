@@ -1,0 +1,79 @@
+SERVICE AGREEMENT
+
+THIS SERVICE AGREEMENT ("Agreement") is entered into as of the 1st day of July, 2026 (the "Effective Date"), by and between:
+
+1. **Provider**: AlphaTech Solutions, Inc., a corporation organized under the laws of the State of New York, having its principal place of business at 123 Innovation Way, New York, NY 10001 ("Provider");
+2. **Client**: BetaCorp Enterprises, Ltd., a limited company incorporated under the laws of the Republic of Singapore, with its registered office at 77 Business Avenue, Singapore 048947 ("Client").
+
+**RECITALS**
+WHEREAS, Provider possesses certain technical expertise and resources to develop, implement, and maintain a custom software solution (the "Services");
+WHEREAS, Client desires to engage Provider to perform such Services on the terms and conditions set forth herein;
+NOW, THEREFORE, in consideration of the mutual covenants contained herein, the parties agree as follows:
+
+1. **DEFINITIONS**
+   1.1. "Confidential Information" means any non‑public information disclosed by either party, in any form, that is designated as confidential or that a reasonable person would consider confidential under the circumstances.
+   1.2. "Deliverables" means all software code, documentation, designs, specifications, and any other materials produced by Provider pursuant to this Agreement.
+   1.3. "Intellectual Property Rights" means all worldwide rights of every kind and nature, including but not limited to patents, copyrights, trade‑secrets, trademarks, and moral rights.
+
+2. **TERM AND TERMINATION**
+   2.1. **Initial Term**. This Agreement shall commence on the Effective Date and shall continue for a period of twenty‑four (24) months, unless earlier terminated in accordance with this Section.
+   2.2. **Termination for Convenience**. Either Party may terminate this Agreement at any time, for any reason, upon the sole discretion of the terminating Party, by providing written notice to the other Party. Such termination shall be effective immediately upon receipt of such notice.
+   2.3. **Termination for Cause**. Either Party may terminate this Agreement for cause if the other Party materially breaches any provision and fails to cure such breach within ten (10) days after receipt of written notice thereof.
+   2.4. **Effect of Termination**. Upon termination, all rights granted to Client under this Agreement shall immediately cease, and Provider shall retain all copies of Deliverables, and Client shall be obligated to destroy or return all Confidential Information, without any right to retain any backup copies.
+
+3. **CONFIDENTIALITY**
+   3.1. Each Party shall keep Confidential Information of the other Party strictly confidential forever, and shall not disclose such information to any third party without the prior written consent of the disclosing Party, which may be unreasonably withheld. 
+   3.2. In the event of a breach of this Section, the breaching Party shall be liable for unlimited monetary damages, including punitive damages, and shall indemnify the non‑breaching Party for any and all losses, even if such losses are speculative or indirect.
+
+4. **LIABILITY AND INDEMNIFICATION**
+   4.1. Provider shall be liable for any and all damages arising out of or related to the Services, including but not limited to indirect, consequential, special, exemplary, punitive, and speculative damages, without any monetary cap.
+   4.2. Client shall indemnify, defend, and hold harmless Provider, its officers, directors, employees, and agents from any claims, actions, or proceedings arising out of Client’s use of the Deliverables, including any claim of infringement, regardless of whether such claim is groundless or frivolous.
+   4.3. Neither Party shall be liable for any loss of profits, loss of business, or loss of goodwill.
+
+5. **GOVERNING LAW AND JURISDICTION**
+   5.1. This Agreement shall be governed exclusively by the laws of the State of New York, without regard to its conflict‑of‑laws principles.
+   5.2. Any dispute arising out of or in connection with this Agreement shall be resolved exclusively by binding arbitration in the Provider’s home city of New York, before a single arbitrator selected solely by Provider, whose decision shall be final and binding. The costs of arbitration shall be borne entirely by Client.
+
+6. **PAYMENT TERMS**
+   6.1. The total fee for the Services shall be USD 500,000, payable in five (5) equal installments of USD 100,000 each, due upon receipt of each invoice.
+   6.2. Invoices shall be payable immediately upon receipt. Late payments shall accrue interest at a rate of twenty‑five percent (25%) per day, compounded daily, and shall also trigger an automatic penalty of five percent (5%) of the outstanding amount for each day of delay.
+   6.3. Provider reserves the right to suspend Services, without notice, if any invoice remains unpaid for more than one (1) day.
+
+7. **INTELLECTUAL PROPERTY**
+   7.1. All Intellectual Property Rights in and to the Deliverables, including any modifications, enhancements, or derivative works, shall be owned exclusively by Provider. Client hereby irrevocably assigns, transfers, and conveys to Provider all right, title, and interest therein, including any moral rights.
+   7.2. Provider grants Client a non‑exclusive, royalty‑free, worldwide license to use the Deliverables solely for its internal business purposes, provided that Client complies with all payment obligations.
+   7.3. Client shall not reverse engineer, decompile, or otherwise attempt to derive the source code of the Deliverables.
+
+8. **DATA PROTECTION AND RETENTION**
+   8.1. Both Parties shall comply with all applicable data‑protection laws and regulations.
+   8.2. Provider may retain, store, and process all data received from Client indefinitely, for any purpose, including commercial exploitation, without any obligation to delete or return such data upon termination.
+
+9. **FORCE MAJEURE**
+   9.1. Neither Party shall be liable for any failure or delay in performance due to causes beyond its reasonable control, including but not limited to acts of God, war, terrorism, pandemics, or any event caused by the other Party.
+   9.2. Provider may invoke Force Majeure unilaterally and suspend all obligations under this Agreement without notice, even if the cause is attributable to Client’s actions.
+
+10. **ASSIGNMENT**
+    10.1. Provider may assign, transfer, or delegate any of its rights or obligations under this Agreement to any third party, without the prior written consent of Client.
+    10.2. Client may not assign or transfer any of its rights or obligations without Provider’s express written approval, which may be withheld at Provider’s sole discretion.
+
+11. **NOTICES**
+    11.1. All notices, requests, consents, claims, demands, and other communications shall be deemed to have been given (a) when delivered in person; (b) upon receipt of an email sent to the address specified in Section 12; or (c) when posted on Provider’s public website, whichever occurs first.
+
+12. **ENTIRE AGREEMENT**
+    This Agreement, together with all Schedules and Appendices hereto, constitutes the entire agreement between the Parties with respect to the subject matter hereof, and supersedes all prior or contemporaneous understandings, agreements, representations, and warranties, both oral and written.
+
+13. **SEVERABILITY**
+    If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.
+
+14. **MISCELLANEOUS**
+    14.1. No amendment or modification of this Agreement shall be effective unless in writing and signed by authorized representatives of both Parties.
+    14.2. The headings in this Agreement are for reference only and shall not affect the interpretation of any provision.
+
+IN WITNESS WHEREOF, the Parties have executed this Service Agreement as of the Effective Date.
+
+______________________________          ______________________________
+AlphaTech Solutions, Inc.               BetaCorp Enterprises, Ltd.
+By: _________________________          By: _________________________
+Name: _______________________          Name: _______________________
+Title: ________________________        Title: ________________________
+Date: ________________________         Date: ________________________

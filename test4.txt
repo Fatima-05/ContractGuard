@@ -1,0 +1,30 @@
+======================================================================
+FULL CONTRACT TEST EXAMPLE 3: EMPLOYMENT AND NON-COMPETE AGREEMENT
+======================================================================
+
+This Employment Agreement (the "Agreement") is entered into by and between the Employer and the Employee.
+
+SECTION 1: DUTIES AND RESPONSIBILITIES [UNHARMFUL]
+Employee agrees to perform the duties customary to the position of Software Engineer. Employee shall report directly to the Engineering Manager and comply with all standard company policies, handbooks, and workplace guidelines.
+
+SECTION 2: COMPENSATION AND BONUSES [HARMFUL]
+Employer shall pay Employee a base salary of $6,000 USD per month. However, Employee agrees that Employer reserves the right to retroactively reduce, withhold, or cancel any accrued salary, unpaid wages, or earned sales bonuses at its absolute discretion if Employer determines that Employee's monthly performance metrics fell below internal targets. 
+
+SECTION 3: CONFIDENTIALITY [UNHARMFUL]
+Employee shall not disclose or use any of Employer's proprietary technical data, trade secrets, or client lists for personal gain or to the detriment of the company during or after the employment period.
+
+SECTION 4: COVENANT NOT TO COMPETE [HARMFUL]
+For a period of five (5) years following the termination of employment for any reason, Employee shall not directly or indirectly engage in, consult for, or establish any business that operates in the technology, software, or digital services sector anywhere within the continental United States. Employee acknowledges that this restriction applies even if Employee is terminated by Employer without cause during their probationary period.
+
+SECTION 5: INTELLECTUAL PROPERTY PROVISIONS [UNHARMFUL]
+All inventions, software code, patents, and improvements developed by Employee during working hours or using company equipment shall be considered "work-for-hire" and remain the exclusive property of Employer.
+
+SECTION 6: LIQUIDATED DAMAGES AND FEES [HARMFUL]
+If Employee terminates this Agreement prior to completing twenty-four (24) full months of service, Employee shall immediately pay Employer a lump sum liquidated damages penalty of twenty-five thousand dollars ($25,000.00) USD to offset recruitment and onboarding costs. Furthermore, Employee agrees to pay all of Employer’s legal fees and court costs in any future dispute, regardless of which party ultimately prevails in the litigation.
+
+SECTION 7: NOTICES [UNHARMFUL]
+Any notices required under this Agreement shall be sent in writing to the respective parties at the physical addresses listed in the introductory paragraph of this document.
+
+======================================================================
+END OF CONTRACT EXAMPLE 3
+======================================================================

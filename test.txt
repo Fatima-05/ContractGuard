@@ -1,0 +1,51 @@
+======================================================================
+CONTRACT CLAUSE TESTING DATASET: UNHARMFUL VS. HARMFUL PAIRS
+======================================================================
+
+--- TEST CASE 1: PAYMENT TERMS ---
+
+[ID: PAYMENT_01_UNHARMFUL]
+Payment Terms. Client shall pay all undisputed invoices within thirty (30) days of receipt. Any invoice not paid within such period shall accrue interest at a rate of 1.5% per month until paid in full.
+
+[ID: PAYMENT_02_HARMFUL]
+Payment Terms. Client shall pay all invoices within thirty (30) days of receipt. Any invoice not disputed in writing within five (5) business days of receipt shall be deemed irrevocably accepted. Interest on late balances shall accrue at the maximum rate permitted by law, compounded daily. Client agrees that all pricing is subject to automatic retroactive adjustments by Provider based on shifting operational overhead, and Client's payment obligations under this Section shall survive expiration or termination of this Agreement for a period of ten (10) years.
+
+
+--- TEST CASE 2: LIMITATION OF LIABILITY ---
+
+[ID: LIABILITY_01_UNHARMFUL]
+Limitation of Liability. Except for breaches of confidentiality or indemnification obligations, neither party shall be liable to the other for any indirect, incidental, or consequential damages arising out of this Agreement.
+
+[ID: LIABILITY_02_HARMFUL]
+Limitation of Liability. Except for Client's payment, confidentiality, and data safety obligations—for which liability is completely uncapped—neither party shall be liable to the other for indirect, incidental, or consequential damages. Provider's total aggregate liability for any and all claims, breaches, or negligence under this Agreement shall be strictly capped at fifty dollars ($50.00), regardless of the nature or severity of the underlying claim.
+
+
+--- TEST CASE 3: TERMINATION AND RENEWAL ---
+
+[ID: RENEWAL_01_UNHARMFUL]
+Term and Termination. This Agreement shall automatically renew for successive one-year terms unless either party provides written notice of non-renewal at least thirty (30) days prior to the end of the then-current term.
+
+[ID: RENEWAL_02_HARMFUL]
+Term and Renewal. This Agreement shall automatically renew for successive three-year terms unless Client provides written notice of non-renewal via certified mail. Such notice must be received by Provider precisely between ninety (90) and eighty-five (85) days prior to the expiration of the current term. Failure to hit this window constitutes irrevocable acceptance of the renewal, along with an automatic, non-negotiable 25% price increase for the subsequent term.
+
+
+--- TEST CASE 4: INDEMNIFICATION ---
+
+[ID: INDEMNIFY_01_UNHARMFUL]
+Indemnification. Provider agrees to indemnify and hold harmless Client from any third-party claims arising directly from Provider's gross negligence or willful misconduct in performing the Services.
+
+[ID: INDEMNIFY_02_HARMFUL]
+Indemnification. Client agrees to defend, indemnify, and hold harmless Provider and its affiliates from any and all claims, losses, or demands—including reasonable attorney fees—arising out of, relating to, or tangentially connected with the Services. Client's duty to defend arises immediately upon the mere allegation of a claim by any third party, regardless of whether any fault or liability on the part of the Client has been established by a court.
+
+
+--- TEST CASE 5: INTELLECTUAL PROPERTY ---
+
+[ID: IP_01_UNHARMFUL]
+Intellectual Property. Each party retains all rights, title, and interest in its pre-existing intellectual property. Any deliverables created specifically for Client under this Statement of Work shall become the property of Client upon full payment of all underlying fees.
+
+[ID: IP_02_HARMFUL]
+Intellectual Property. Client retains ownership of its pre-existing data. However, Client hereby grants Provider a worldwide, perpetual, irrevocable, royalty-free, transferable license to use, modify, exploit, and commercialize any data, feedback, or materials submitted to the platform. Any derivative works, workflows, or custom features developed during the term of this Agreement shall be the sole and exclusive property of Provider, even if funded entirely by Client.
+
+======================================================================
+END OF TEST DATASET
+======================================================================
