@@ -27,60 +27,23 @@ def _extract_text(content: bytes) -> str:
     return content.decode(errors="ignore")
 
 
-# Split patterns tried in order for PDF-extracted text
-_SPLIT_PATTERNS = [
-    re.compile(r"(?:SECTION|Section|ARTICLE|Article|CLAUSE|Clause)\s+\d+\s*[:.]?\s*"),
-    re.compile(r"\b(?:SECTION|Section|ARTICLE|Article|CLAUSE|Clause)\s+\d+\s*[:.]?\s*"),
-    re.compile(r"(?:^|\s)\[HARMFUL\]\s*|\s*\[UNHARMFUL\]\s*"),
-    re.compile(r"\n\s*\d+\.\s+(?=[A-Z])"),
-]
+_HEADER_PREFIX = re.compile(
+    r"((?:SECTION|Section|ARTICLE|Article|CLAUSE|Clause)\s+\d+\s*[\.:]?\s*[^\.:\[\(]+)\s*"
+)
 
-def _split_sections(text: str) -> List[Dict]:
-    for pat in _SPLIT_PATTERNS:
-        blocks = pat.split(text)
-        blocks = [b.strip() for b in blocks if b.strip()]
-        if len(blocks) > 2:
-            labels = pat.findall(text)
-            result = []
-            for idx, block in enumerate(blocks):
-                label = labels[idx - 1].strip() if idx > 0 and labels else ""
-                if not label:
-                    label = ""
-                clean = pat.sub("", block) if label else block
-                result.append({"header": label, "body": clean})
-
-            if result and not result[0]["header"]:
-                result = result[1:]
-
-            combined = []
-            cur = None
-            for r in result:
-                if r["header"]:
-                    if cur:
-                        combined.append(cur)
-                    cur = r
-                elif cur:
-                    cur["body"] += " " + r["body"]
-                else:
-                    cur = r
-            if cur:
-                combined.append(cur)
-
-            if len(combined) >= 3:
-                return combined
-    return []
+def _preprocess_text(text: str) -> str:
+    for prefix in ["SECTION", "Section", "ARTICLE", "Article", "CLAUSE", "Clause", "PART", "Part"]:
+        text = re.sub(rf"({prefix}\s+\d+[\.:]?\s*)", r"\n\n\1", text)
+    text = re.sub(r"(\[HARMFUL\]|\[UNHARMFUL\])\s*", r"\1\n", text)
+    return text.strip()
 
 
 def _parse_clauses(text: str) -> List[Dict]:
+    text = _preprocess_text(text)
     blocks = re.split(r"(?:\r?\n){2,}", text)
-    if len(blocks) <= 2 and len(text) > 100:
-        sections = _split_sections(text)
-        if sections:
-            return sections
-
     extracted = []
     for block in blocks:
-        block = block.strip() if isinstance(block, str) else block
+        block = block.strip()
         if not block:
             continue
         lines = [ln.strip() for ln in block.splitlines() if ln.strip()]
@@ -89,7 +52,11 @@ def _parse_clauses(text: str) -> List[Dict]:
         if not lines:
             continue
         first = lines[0]
-        if "." in first and first.index(".") < 5:
+        m = _HEADER_PREFIX.match(first)
+        if m and len(m.group(1)) < len(first):
+            header = m.group(1).strip()
+            body = first[m.end():].strip()
+        elif "." in first and first.index(".") < 5:
             header = first.split(".", 1)[0].strip() + "."
             body = first.split(".", 1)[1].strip()
         else:

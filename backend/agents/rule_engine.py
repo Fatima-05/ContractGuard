@@ -144,6 +144,8 @@ _UNIVERSAL_CHECKS: List[Tuple[str, str]] = [
     # ── Automatic renewal with penalty ──
     (r"(?:increase|penalt|fee|charge|additional).{0,30}(?:upon|when|after|on).{0,20}(?:renew|auto)",
      "Financial penalty or price increase tied to renewal"),
+    (r"(?:renew|auto).{0,80}(?:increase|penalt|fee|charge|additional|surcharg)",
+     "Automatic renewal with financial penalty or price increase"),
 
     # ── Narrow windows / traps ──
     (r"(?:no\s+earlier\s+than|no\s+later\s+than|precisely|exactly).{0,30}(?:\d+).{0,20}(?:day|business\s+day)",
