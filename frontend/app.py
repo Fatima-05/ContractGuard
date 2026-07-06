@@ -42,7 +42,7 @@ with st.sidebar:
     st.markdown("### Analyze")
     uploaded_file = st.file_uploader(
         "Upload contract",
-        type=["pdf", "docx", "txt"],
+        type=["txt"],
         label_visibility="collapsed",
     )
 
@@ -330,7 +330,7 @@ elif st.session_state.current_results is None:
     st.markdown(
         "<div style='text-align:center;padding:60px 20px 20px;color:#555;'>"
         "<div style='font-size:1.2rem;margin-bottom:8px;'>Upload a contract to begin</div>"
-        "<div style='font-size:0.9rem;margin-bottom:20px;'>Supports PDF, DOCX, TXT</div>"
+        "<div style='font-size:0.9rem;margin-bottom:20px;'>Upload a .txt file</div>"
         "</div>",
         unsafe_allow_html=True,
     )

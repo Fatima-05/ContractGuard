@@ -4,7 +4,6 @@ Uses a semantic rule engine (works offline, understands clause structure)
 with optional LLM enhancement for edge cases.
 """
 import asyncio
-import io
 import re
 from typing import Dict, List
 
@@ -12,23 +11,11 @@ from backend.agents.classifier import classify_clause
 
 
 def _extract_text(content: bytes) -> str:
-    if content[:5] == b"%PDF-":
-        try:
-            from pypdf import PdfReader
-            reader = PdfReader(io.BytesIO(content))
-            pages = []
-            for page in reader.pages:
-                t = page.extract_text()
-                if t:
-                    pages.append(t)
-            return "\n\n".join(pages)
-        except Exception:
-            return content.decode(errors="ignore")
     return content.decode(errors="ignore")
 
 
 _HEADER_PREFIX = re.compile(
-    r"((?:SECTION|Section|ARTICLE|Article|CLAUSE|Clause)\s+\d+\s*[\.:]?\s*[^\.:\[\(]+)\s*"
+    r"((?:SECTION|Section|ARTICLE|Article|CLAUSE|Clause)\s+\d+\s*[\.:]?\s*[^\n\.:\[\(]+)\s*"
 )
 
 def _preprocess_text(text: str) -> str:
