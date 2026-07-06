@@ -87,12 +87,34 @@ def _find_unicode_font():
         "C:\\Windows\\Fonts\\arial.ttf",
         "C:\\Windows\\Fonts\\segoeui.ttf",
         "C:\\Windows\\Fonts\\calibri.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+        "/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf",
     ]:
         if Path(path).exists():
             return path
     return None
 
 _UNICODE_FONT = _find_unicode_font()
+
+if not _UNICODE_FONT:
+    try:
+        import requests as req
+        url = "https://github.com/dejavu-fonts/dejavu-fonts/raw/master/ttf/DejaVuSans.ttf"
+        r = req.get(url, timeout=15)
+        if r.status_code == 200:
+            cache = Path.home() / ".cache" / "contractguard"
+            cache.mkdir(parents=True, exist_ok=True)
+            font_path = cache / "DejaVuSans.ttf"
+            font_path.write_bytes(r.content)
+            _UNICODE_FONT = str(font_path)
+    except Exception:
+        pass
+
+def _sanitize(text):
+    if _UNICODE_FONT:
+        return text
+    return text.encode("ascii", errors="replace").decode("ascii")
 
 def generate_pdf(file_name, clauses, total, flagged, safe, concerning, critical):
     pdf = FPDF()
@@ -107,12 +129,12 @@ def generate_pdf(file_name, clauses, total, flagged, safe, concerning, critical)
     def h(text, size=18, color=(200, 40, 40)):
         pdf.set_font(font_name, "", size)
         pdf.set_text_color(*color)
-        pdf.cell(0, size + 4, text, new_x="LMARGIN", new_y="NEXT")
+        pdf.cell(0, size + 4, _sanitize(text), new_x="LMARGIN", new_y="NEXT")
 
     def body(text, size=10, color=(60, 60, 60)):
         pdf.set_font(font_name, "", size)
         pdf.set_text_color(*color)
-        pdf.multi_cell(0, size + 2, text, new_x="LMARGIN", new_y="NEXT")
+        pdf.multi_cell(0, size + 2, _sanitize(text), new_x="LMARGIN", new_y="NEXT")
 
     h("ContractGuard Analysis Report", 18, (200, 40, 40))
     pdf.ln(4)
